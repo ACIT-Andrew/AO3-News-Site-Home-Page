@@ -10,80 +10,91 @@
     <link rel="stylesheet" href="styles/style.css" />
 
     <title>A03_News_Site</title>
-</head>
-<body>
-    <header>
-        <div class="outer">
-            <div class="logo-title">
-              <a class="logo" href="#0">
-              <img src="images/jaw.svg" alt="JAW Site Logo"/></a>
-              <h1><a href="#0">JAW News</a></h1>
-            </div>
-        <nav id="main-nav-links">
-            <button>Menu</button>
-            <ul>
-              <li><a href="#0">Science</a></li>
-              <li><a href="#0">Politics</a></li>
-              <li><a href="#0">World</a></li>
-              <li><a href="#0">Entertainment</a></li>
-              <li><a href="#0">Sports</a></li>
-            </ul>
-        </nav>
+
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-header__logo" href="#0">
+        <img src="images/jaw.svg" alt="JAW Site Logo"
+      /></a>
+
+      <nav class="site-header__nav">
+        <button class="site-header__menu-btn">
+          <span
+            class="site-header__menu-letter"
+            focusable="false"
+            aria-hidden="true"
+            >M</span
+          >
+          <span
+            class="site-header__menu-letter"
+            focusable="false"
+            aria-hidden="true"
+            >N</span
+          >
+          <span
+            class="site-header__menu-letter"
+            focusable="false"
+            aria-hidden="true"
+            >U</span
+          >
+
+          <span class="site-header__menu-bar"></span>
+          <span class="site-header__menu-bar"></span>
+          <span class="site-header__menu-bar"></span>
+          <span class="screen-reader-text">Menu button</span>
+        </button>
+        <ul>
+          <li><a href="#0">Science</a></li>
+          <li><a href="#0">Politics</a></li>
+          <li><a href="#0">World</a></li>
+          <li><a href="#0">Entertainment</a></li>
+          <li><a href="#0">Sports</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section id="stories-wrapper">
-            <section id="stories-wrapper__left">
-                <article>
-
-                </article>
-                <article>
-
-                </article>
-                <article>
-
-                </article>
-            </section>
-            <section id="stories-wrapper__center">
-                <article>
-
-                </article>
-                <article>  
-
-                </article>
-            </section>
-            <section id="stories-wrapper__right">
-                <article>
-
-                </article>
-                <article>
-
-                </article>
-                <article>
-                    
-                </article>
-            </section>
+      <section id="stories-wrapper">
+        <section id="stories-wrapper__left">
+          <article></article>
+          <article></article>
+          <article></article>
         </section>
+        <section id="stories-wrapper__center">
+          <article></article>
+          <article></article>
+        </section>
+        <section id="stories-wrapper__right">
+          <article></article>
+          <article></article>
+          <article></article>
+        </section>
+      </section>
     </main>
     <footer>
-        <div class="logo-title">
-
-        </div>
-        <nav id="footer-nav-links">
-            <button>Menu</button>
-            <ul>
-              <li><a href="#0">Science</a></li>
-              <li><a href="#0">Politics</a></li>
-              <li><a href="#0">World</a></li>
-              <li><a href="#0">Entertainment</a></li>
-              <li><a href="#0">Sports</a></li>
-            </ul>
-        </nav>
-        <div>
-            <p>JAW NEWS MEDIA</p>
-            <address>
-                8888 JAW Street
-            </address>
-        </div>
+      <div class="logo-title"></div>
+      <nav id="footer-nav-links">
+        <button>Menu</button>
+        <ul>
+          <li><a href="#0">Science</a></li>
+          <li><a href="#0">Politics</a></li>
+          <li><a href="#0">World</a></li>
+          <li><a href="#0">Entertainment</a></li>
+          <li><a href="#0">Sports</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p>JAW NEWS MEDIA</p>
+        <address>8888 JAW Street</address>
+      </div>
     </footer>
-</body>
+
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
