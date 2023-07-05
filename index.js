@@ -10,4 +10,6 @@ $(".site-header__menu-btn").on("click", () => {
     $(".site-header__menu-btn span:nth-child(2)").text("N");
     $(".site-header__menu-btn span:nth-child(3)").text("U");
   }
+
+  $(".site-header__nav").toggleClass("show");
 });
