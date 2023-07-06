@@ -1,5 +1,5 @@
 html {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /* GENERAL STYLES */
@@ -66,6 +66,9 @@ html {
 }
 
 @media (min-width: 48em) {
+  html{
+    font-size: 16px;
+  }
    /* MAIN GRID */
    /* ********* */
   .desk-grid {
@@ -103,7 +106,7 @@ html {
   /* FORMAT COLUMNS */
   /* *********************** */
   .news-column {
-    justify-content: start;
+    justify-content: space-between;
 
     height: 100%;
   }
