@@ -119,10 +119,10 @@ articlesInsider.forEach(function (article) {
 // Add image to top article
 function addImage({latest, top, insider}){
   // Latest image
-  $("#latest .news-column-section:nth-child(2) .news-content").prepend(`<div class="thumbnail"><a href="#"><img src="${latest.url}" alt="${latest.alt}"></a></div>`);
+  $("#latest .news-column-section:nth-child(2) .news-content").prepend(`<a href="#" class="thumbnail"><img src="${latest.url}" alt="${latest.alt}"></a>`);
   // Top stories image
-  $("#top-stories .news-column-section:nth-child(2) .news-content").prepend(`<div class="thumbnail"><a href="#"><img src="${top.url}" alt="${top.alt}"></a></div>`);
+  $("#top-stories .news-column-section:nth-child(2) .news-content").prepend(`<a href="#" class="thumbnail"><img src="${top.url}" alt="${top.alt}"></a>`);
   // Insider image
-  $("#insider .news-column-section:nth-child(2) .news-content").prepend(`<div class="thumbnail"><a href="#"><img src="${insider.url}" alt="${insider.alt}"></a></div>`);
+  $("#insider .news-column-section:nth-child(2) .news-content").prepend(`<a href="#" class="thumbnail"><img src="${insider.url}" alt="${insider.alt}"></a>`);
 }
 addImage(images);

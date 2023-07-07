@@ -56,6 +56,12 @@ html {
 .news-content * {
   margin-bottom: 1rem;
 }
+.news-content a{
+  text-decoration: none;
+}
+.news-content h3 a {
+  font-size: 1.5rem;
+}
 .news-content h3 + p {
   color: red;
 }
@@ -63,14 +69,14 @@ html {
   font-style: italic;
 }
 /* IMAGE DIV */
-.thumbnail {
+a.thumbnail {
   width: fit-content;
   height: fit-content;
   max-height: 200px;
 
   margin-bottom: 1rem;
 }
-.thumbnail a{
+a.thumbnail {
   width: 100%;
   height: fit-content;
 }
