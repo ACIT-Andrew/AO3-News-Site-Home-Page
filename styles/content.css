@@ -5,12 +5,13 @@ html {
 /* GENERAL STYLES */
 /* ************** */
 .box {
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.509);
 }
 
 .news-column-heading {
   width: 100%;
   text-align: center;
+  padding: 1.5rem 0;
 }
 
 /* FORMAT COLUMNS */
