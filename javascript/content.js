@@ -21,46 +21,46 @@ const articlesLatest = [
   {
     title: "AI is dying, here's why",
     author: "Yilong Ma",
-    text: "Elon Musk says it's not even that good.",
+    text: "Elon Musk says, \"It's not even that good.\"",
   },
   {
     title: "Covid-19 was a 'flu-ke'",
     author: "Yilong Ma",
-    text: "The global impact and severity of this pandemic caught the world off guard, highlighting the need for better preparedness and response strategies.",
+    text: "Someone sneezed by accident.",
   },
 ];
 const articlesTop = [
   {
     title: "Google seeking to acquire Instagram",
     author: "Mark Zuckerberg",
-    text: "This potential acquisition could reshape the social media landscape and provide Google with a stronger foothold in the visual content sharing market",
+    text: "Google will know everything - and everyone.",
   },
   {
     title: "Meta sells Instagram",
     author: "Mark Zuckerberg",
-    text: "This surprising move marks a significant shift in the social media landscape, leaving users and industry experts speculating on the future direction of both companies.",
+    text: "This is surprising, but just wait for it...",
   },
   {
     title: "Meta seeking to acquire Google",
     author: "Mark Zuckerberg",
-    text: "If successful, this ambitious move could redefine the tech industry landscape and consolidate Meta's position as a dominant player in the digital realm.",
+    text: "I own the world. I am God.",
   },
 ];
 const articlesInsider = [
   {
     title: "Composting is actually bad for the environment",
     author: "Greta Thunberg",
-    text: "Contrary to popular belief, improper composting practices can generate harmful greenhouse gases and contribute to environmental degradation.",
+    text: "The world is getting warmer, so all that compost is gonna stink even more.",
   },
   {
     title: "TikTok is confusing by design",
     author: "Sara Morrison",
-    text: "Its addictive and fast-paced content consumption, coupled with an algorithm-driven interface, keeps users engaged but also raises concerns about privacy and data usage.",
+    text: "Addicting and fast-paced, the way China will take over the world.",
   },
   {
     title: "1 + 1 = 2",
     author: "Neel Degrass Tysun",
-    text: "This fundamental mathematical equation represents the basic principle of addition, where combining two units results in a total of two.",
+    text: "I've thought about this, long and hard.",
   },
 ];
 
@@ -117,12 +117,12 @@ articlesInsider.forEach(function (article) {
 });
 
 // Add image to top article
-function addImage(){
-  let image = `<div class="thumbnail"><img src="${images.latest.url}" alt="${images.latest.alt}"></div>`;
-
-  $(".news-column .news-column-item:nth-child(2)").prepend(image);
-
-  const newsColumns = $('.news-column');
-
+function addImage({latest, top, insider}){
+  // Latest image
+  $("#latest .news-column-item:nth-child(2) .news-content").prepend(`<div class="thumbnail"><a href="#"><img src="${latest.url}" alt="${latest.alt}"></a></div>`);
+  // Top stories image
+  $("#top-stories .news-column-item:nth-child(2) .news-content").prepend(`<div class="thumbnail"><a href="#"><img src="${top.url}" alt="${top.alt}"></a></div>`);
+  // Insider image
+  $("#insider .news-column-item:nth-child(2) .news-content").prepend(`<div class="thumbnail"><a href="#"><img src="${insider.url}" alt="${insider.alt}"></a></div>`);
 }
-addImage();
+addImage(images);
