@@ -27,11 +27,11 @@ html {
 }
 /* IMAGE DIV */
 .thumbnail {
-  width: 90%;
+  width: 80%;
   height: fit-content;
 
   margin: 0 auto;
-  overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 
@@ -42,11 +42,12 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 2rem;
 
   padding: 2rem;
 }
 .news-column > .news-column-item {
+  flex: 1 0 auto;
   width: 100%;
   /* border-bottom: 1px solid #000; */
 }

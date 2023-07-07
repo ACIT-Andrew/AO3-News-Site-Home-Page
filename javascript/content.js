@@ -1,14 +1,14 @@
 const images = {
   latest: {
-    url: "images/story-images/flat-earth.jpg",
+    url: "images/story-images/flat-earth.png",
     alt: "flat earth in space",
   },
   top: {
-    url: "images/story-images/google-insta.jpg",
+    url: "images/story-images/google-insta.png",
     alt: "google logo and instagram logo",
   },
   insider: {
-    url: "images/story-images/compost.jpg",
+    url: "images/story-images/compost.png",
     alt: "compost and hands holding soil",
   },
 };
@@ -66,27 +66,23 @@ const articlesInsider = [
 
 // Latest Stories
 const latestColumn = $("#latest");
-articlesLatest.forEach(function (article, index) {
+articlesLatest.forEach(function (article) {
   let newArticle = `
-    <section class="news-column-item">
-    <article class="news-content">
-      <h3><a href="#">${article.title}</a></h3>
-      <p>By ${article.author}</p>
-      <p>${article.text}</p>
-    </article>
-    </section>
-    `;
-
-  let image = `<img src="${images.latest.url}" alt="${images.latest.alt}">`;
+  <section class="news-column-item">
+  <article class="news-content">
+  <h3><a href="#">${article.title}</a></h3>
+  <p>By ${article.author}</p>
+  <p>${article.text}</p>
+  </article>
+  </section>
+  `;
 
   latestColumn.append(newArticle);
-
-  $("")
 });
 
 // Top Stories
 const topStoriesColumn = $("#top-stories");
-articlesTop.forEach(function (article, index) {
+articlesTop.forEach(function (article) {
   let newArticle = `
   <section class="news-column-item">
   <article class="news-content">
@@ -104,7 +100,7 @@ articlesTop.forEach(function (article, index) {
 
 // Insider Stories
 const insiderColumn = $("#insider");
-articlesInsider.forEach(function (article, index) {
+articlesInsider.forEach(function (article) {
   let newArticle = `
   <section class="news-column-item">
   <article class="news-content">
@@ -119,3 +115,14 @@ articlesInsider.forEach(function (article, index) {
 
   insiderColumn.append(newArticle);
 });
+
+// Add image to top article
+function addImage(){
+  let image = `<div class="thumbnail"><img src="${images.latest.url}" alt="${images.latest.alt}"></div>`;
+
+  $(".news-column .news-column-item:nth-child(2)").prepend(image);
+
+  const newsColumns = $('.news-column');
+
+}
+addImage();

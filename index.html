@@ -14,8 +14,7 @@
     <script
       src="https://code.jquery.com/jquery-3.7.0.js"
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous" defer></script>
     <script src="javascript/content.js" defer></script>
 
     <title>A03_News_Site</title>
@@ -41,25 +40,25 @@
     </header>
     <main>
         <div id="stories-wrapper">
-            <section class="desk-grid">
-                <article class="news-column mob-flex-item" id="latest">
+            <div class="desk-grid">
+                <section class="news-column" id="latest">
                   <div class="box heading">
                     <h2>Latest</h2>
                   </div>
-                </article>
+                </section>
         
-                <article class="news-column mob-flex-item" id="top-stories">
+                <section class="news-column" id="top-stories">
                   <div class="box heading">
                     <h2>Top Stories</h2>
                   </div>
-                </article>
+                </section>
         
-                <article class="news-column mob-flex-item" id="insider">
+                <section class="news-column" id="insider">
                   <div class="box heading">
                     <h2>Insider</h2>
                   </div>
-                </article>
-              </section>
+                </section>
+              </div>
         </div>
     </main>
     <footer>
