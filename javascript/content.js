@@ -68,7 +68,7 @@ const articlesInsider = [
 const latestColumn = $("#latest");
 articlesLatest.forEach(function (article) {
   let newArticle = `
-  <section class="news-column-item">
+  <section class="news-column-section">
   <article class="news-content">
   <h3><a href="#">${article.title}</a></h3>
   <p>By <a href="">${article.author}</a></p>
@@ -84,7 +84,7 @@ articlesLatest.forEach(function (article) {
 const topStoriesColumn = $("#top-stories");
 articlesTop.forEach(function (article) {
   let newArticle = `
-  <section class="news-column-item">
+  <section class="news-column-section">
   <article class="news-content">
   <h3><a href="#">${article.title}</a></h3>
   <p>By <a href="">${article.author}</a></p>
@@ -102,7 +102,7 @@ articlesTop.forEach(function (article) {
 const insiderColumn = $("#insider");
 articlesInsider.forEach(function (article) {
   let newArticle = `
-  <section class="news-column-item">
+  <section class="news-column-section">
   <article class="news-content">
   <h3><a href="#">${article.title}</a></h3>
   <p>By <a href="">${article.author}</a></p>
@@ -119,10 +119,10 @@ articlesInsider.forEach(function (article) {
 // Add image to top article
 function addImage({latest, top, insider}){
   // Latest image
-  $("#latest .news-column-item:nth-child(2) .news-content").prepend(`<div class="thumbnail"><a href="#"><img src="${latest.url}" alt="${latest.alt}"></a></div>`);
+  $("#latest .news-column-section:nth-child(2) .news-content").prepend(`<div class="thumbnail"><a href="#"><img src="${latest.url}" alt="${latest.alt}"></a></div>`);
   // Top stories image
-  $("#top-stories .news-column-item:nth-child(2) .news-content").prepend(`<div class="thumbnail"><a href="#"><img src="${top.url}" alt="${top.alt}"></a></div>`);
+  $("#top-stories .news-column-section:nth-child(2) .news-content").prepend(`<div class="thumbnail"><a href="#"><img src="${top.url}" alt="${top.alt}"></a></div>`);
   // Insider image
-  $("#insider .news-column-item:nth-child(2) .news-content").prepend(`<div class="thumbnail"><a href="#"><img src="${insider.url}" alt="${insider.alt}"></a></div>`);
+  $("#insider .news-column-section:nth-child(2) .news-content").prepend(`<div class="thumbnail"><a href="#"><img src="${insider.url}" alt="${insider.alt}"></a></div>`);
 }
 addImage(images);
