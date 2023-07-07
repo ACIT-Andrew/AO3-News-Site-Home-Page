@@ -21,11 +21,11 @@ const articlesLatest = [
   {
     title: "AI is dying, here's why",
     author: "Yilong Ma",
-    text: "Elon Musk says, \"It's not even that good.\"",
+    text: "Elon Musk says, \"It's not even that good\".",
   },
   {
     title: "Covid-19 was a 'flu-ke'",
-    author: "Yilong Ma",
+    author: "Juaceen Oppa",
     text: "Someone sneezed by accident.",
   },
 ];
@@ -55,7 +55,7 @@ const articlesInsider = [
   {
     title: "TikTok is confusing by design",
     author: "Sara Morrison",
-    text: "Addicting and fast-paced, the way China will take over the world.",
+    text: "Addictive and fast-paced, the way China will take over the world.",
   },
   {
     title: "1 + 1 = 2",
@@ -71,7 +71,7 @@ articlesLatest.forEach(function (article) {
   <section class="news-column-item">
   <article class="news-content">
   <h3><a href="#">${article.title}</a></h3>
-  <p>By ${article.author}</p>
+  <p>By <a href="">${article.author}</a></p>
   <p>${article.text}</p>
   </article>
   </section>
@@ -87,7 +87,7 @@ articlesTop.forEach(function (article) {
   <section class="news-column-item">
   <article class="news-content">
   <h3><a href="#">${article.title}</a></h3>
-  <p>By ${article.author}</p>
+  <p>By <a href="">${article.author}</a></p>
   <p>${article.text}</p>
   </article>
   </section>
@@ -105,7 +105,7 @@ articlesInsider.forEach(function (article) {
   <section class="news-column-item">
   <article class="news-content">
   <h3><a href="#">${article.title}</a></h3>
-  <p>By ${article.author}</p>
+  <p>By <a href="">${article.author}</a></p>
   <p>${article.text}</p>
   </article>
   </section>
