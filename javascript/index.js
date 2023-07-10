@@ -1,3 +1,36 @@
+// Handle hamburger menu
+
+$(".site-header__menu-btn").on("click", () => {
+  $(".site-header__menu-btn").toggleClass("selected");
+
+  if ($(".site-header__menu-btn").hasClass("selected")) {
+    $(".site-header__menu-btn span:nth-child(1)").text("E");
+    $(".site-header__menu-btn span:nth-child(2)").text("I");
+    $(".site-header__menu-btn span:nth-child(3)").text("T");
+  } else {
+    $(".site-header__menu-btn span:nth-child(1)").text("M");
+    $(".site-header__menu-btn span:nth-child(2)").text("N");
+    $(".site-header__menu-btn span:nth-child(3)").text("U");
+  }
+
+  $(".site-header__nav").toggleClass("show");
+});
+
+// Handle sub menu
+
+$(".site-header__sub-menu-title")
+  .off("click")
+  .on("click", function () {
+    const arrow = $(this).find("svg");
+    console.log(arrow);
+    $(".bi").not(arrow).removeClass("rotated");
+    arrow.toggleClass("rotated");
+
+    const subMenu = $(this).next(".site-header__sub-menu");
+    $(".site-header__sub-menu").not(subMenu).slideUp("fast");
+    subMenu.slideToggle("fast");
+  });
+
 const images = {
   latest: {
     url: "images/story-images/flat-earth.png",
@@ -21,7 +54,7 @@ const articlesLatest = [
   {
     title: "AI is dying, here's why",
     author: "Yilong Ma",
-    text: "Elon Musk says, \"It's not even that good\".",
+    text: 'Elon Musk says, "It\'s not even that good".',
   },
   {
     title: "Covid-19 was a 'flu-ke'",
@@ -117,12 +150,18 @@ articlesInsider.forEach(function (article) {
 });
 
 // Add image to top article
-function addImage({latest, top, insider}){
+function addImage({ latest, top, insider }) {
   // Latest image
-  $("#latest .news-column-section:nth-child(2) .news-content").prepend(`<a href="#" class="thumbnail"><img src="${latest.url}" alt="${latest.alt}"></a>`);
+  $("#latest .news-column-section:nth-child(2) .news-content").prepend(
+    `<a href="#" class="thumbnail"><img src="${latest.url}" alt="${latest.alt}"></a>`
+  );
   // Top stories image
-  $("#top-stories .news-column-section:nth-child(2) .news-content").prepend(`<a href="#" class="thumbnail"><img src="${top.url}" alt="${top.alt}"></a>`);
+  $("#top-stories .news-column-section:nth-child(2) .news-content").prepend(
+    `<a href="#" class="thumbnail"><img src="${top.url}" alt="${top.alt}"></a>`
+  );
   // Insider image
-  $("#insider .news-column-section:nth-child(2) .news-content").prepend(`<a href="#" class="thumbnail"><img src="${insider.url}" alt="${insider.alt}"></a>`);
+  $("#insider .news-column-section:nth-child(2) .news-content").prepend(
+    `<a href="#" class="thumbnail"><img src="${insider.url}" alt="${insider.alt}"></a>`
+  );
 }
 addImage(images);
