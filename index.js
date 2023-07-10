@@ -13,3 +13,16 @@ $(".site-header__menu-btn").on("click", () => {
 
   $(".site-header__nav").toggleClass("show");
 });
+
+$(".site-header__sub-menu-title")
+  .off("click")
+  .on("click", function () {
+    const arrow = $(this).find("svg");
+    console.log(arrow);
+    $(".bi").not(arrow).removeClass("rotated");
+    arrow.toggleClass("rotated");
+
+    const subMenu = $(this).next(".site-header__sub-menu");
+    $(".site-header__sub-menu").not(subMenu).slideUp("fast");
+    subMenu.slideToggle("fast");
+  });

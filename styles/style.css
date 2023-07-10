@@ -10,7 +10,7 @@ body {
 /* ==== Header ==== */
 
 .site-header {
-  /* background-color: red; */
+  background-color: lightblue;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,9 +20,11 @@ body {
 .site-header__logo > img {
   width: 4rem;
   height: 4rem;
+  min-width: 4rem;
+  min-height: 4rem;
 }
 
-.site-header__nav ul {
+.site-header__nav > ul {
   position: absolute;
   padding: 2rem 0;
   top: 0;
@@ -37,27 +39,61 @@ body {
 }
 
 /* Nav toggle */
-.site-header__nav.show ul {
-  width: 75%;
+.site-header__nav.show > ul {
+  width: 70%;
 }
 
-.site-header__nav ul li {
+.site-header__nav > ul li {
   background-color: #aaa6a6;
   margin: 0.2rem 0;
+  width: 100%;
+}
+
+.site-header__sub-menu-title {
+  display: inline-block;
+  padding: 0.5rem 0;
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 .site-header__nav ul a {
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 0.5rem 0;
   width: 100%;
   text-decoration: none;
   color: white;
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
-.site-header__nav ul li:hover {
+.site-header__nav ul > li:hover {
   background-color: #aaa6a6;
   box-shadow: 0 4px 16px;
+}
+
+/* Nav sub menu */
+.bi {
+  vertical-align: -0.025em;
+  margin-left: 0.2rem;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.site-header__sub-menu {
+  width: 100%;
+
+  list-style: none;
+}
+
+.site-header__sub-menu-title + ul li {
+  background-color: #cfcfcf;
+}
+
+.site-header__sub-menu-title + ul > li:hover {
+  background-color: rgb(233, 232, 232);
 }
 
 /* Menu button style */
@@ -146,22 +182,45 @@ body {
     position: static;
     width: 100%;
     padding: 0;
-    background-color: white;
+    background-color: transparent;
     transition: none;
   }
 
-  .site-header__nav ul li {
-    background-color: white;
+  .site-header__nav > ul > li {
+    background-color: transparent;
+    margin: 0;
+  }
+
+  .site-header__sub-menu-title {
+    color: black;
+    padding: 0.5rem 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 
   .site-header__nav ul a {
     color: black;
     padding: 0.5rem 1rem;
-    font-size: 1.3rem;
   }
 
   .site-header__nav ul li:hover {
     background-color: white;
     box-shadow: none;
+  }
+
+  .site-header__sub-menu-title + ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    top: 4rem;
+    width: fit-content;
+  }
+
+  .site-header__sub-menu-title + ul li {
+    background: rgb(204, 225, 233);
+    width: 100%;
+    margin: 0;
   }
 }
