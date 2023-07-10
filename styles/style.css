@@ -1,3 +1,24 @@
+/* ==== General ==== */
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: white;
+}
+
+/* ==== Colors ==== */
+
+:root {
+  --magenta-theme: #9E1F63;
+  --green-theme: #00A651;
+  --orange-theme-: #F7941D;
+  --grey-theme: #aaa6a6;
+  --dark-grey-theme: gray;
+}
+
 /* ==== Typography ==== */
 
 body {
@@ -109,17 +130,17 @@ body {
 .site-header__menu-btn span:nth-child(4) {
   top: 4px;
   left: 0;
-  background-color: #9e1f63;
+  background-color: var(--magenta-theme);
 }
 
 .site-header__menu-btn span:nth-child(5) {
-  background-color: #00a651;
+  background-color: var(--green-theme);
   left: 0;
   transform: translateY(-1.5px);
 }
 
 .site-header__menu-btn span:nth-child(6) {
-  background-color: #f7941d;
+  background-color: var(--orange-theme-);
   left: 0;
   bottom: 4px;
 }
@@ -165,3 +186,97 @@ body {
     box-shadow: none;
   }
 }
+
+/* footer styling */
+footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--grey-theme);
+  padding: 2rem;
+  padding-top: 0;
+  border-top: 5px solid var(--magenta-theme);
+}
+
+.logo-div {
+  display: flex;
+  justify-content: center;
+
+}
+
+.logo-div img {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  padding-top: 0;
+}
+
+.footer-nav-links {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.footer-nav-links li {
+  margin-left: 8px;
+  
+}
+
+.u-list-dot {
+  list-style: none;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.u-list-dot li:after {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 1rem;
+  background-color: var(--orange-theme-);
+  margin: 0 8px;
+}
+
+ul {
+  display: block;
+}
+
+@media (min-width: 50em) {
+  footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    background-color: var(--grey-theme);
+    padding: 2rem;
+    padding-top: 0;
+    border-top: 5px solid var(--magenta-theme);
+    align-items: center;
+  }
+
+  .logo-div img {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .footer-nav-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 1rem;
+  }
+}
+
+
+
