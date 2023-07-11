@@ -117,8 +117,8 @@ articlesLatest.forEach(function (article) {
   let newArticle = `
   <section class="news-column-section">
   <article class="news-content">
-  <h3><a href="#">${article.title}</a></h3>
-  <p>By <a href="">${article.author}</a></p>
+  <h3><a href="#0">${article.title}</a></h3>
+  <p>By <a href="#0">${article.author}</a></p>
   <p>${article.text}</p>
   </article>
   </section>
@@ -133,8 +133,8 @@ articlesTop.forEach(function (article) {
   let newArticle = `
   <section class="news-column-section">
   <article class="news-content">
-  <h3><a href="#">${article.title}</a></h3>
-  <p>By <a href="">${article.author}</a></p>
+  <h3><a href="#0">${article.title}</a></h3>
+  <p>By <a href="#0">${article.author}</a></p>
   <p>${article.text}</p>
   </article>
   </section>
@@ -151,8 +151,8 @@ articlesInsider.forEach(function (article) {
   let newArticle = `
   <section class="news-column-section">
   <article class="news-content">
-  <h3><a href="#">${article.title}</a></h3>
-  <p>By <a href="">${article.author}</a></p>
+  <h3><a href="#0">${article.title}</a></h3>
+  <p>By <a href="#0">${article.author}</a></p>
   <p>${article.text}</p>
   </article>
   </section>
@@ -167,15 +167,15 @@ articlesInsider.forEach(function (article) {
 function addImage({ latest, top, insider }) {
   // Latest image
   $("#latest .news-column-section:nth-child(2) .news-content").prepend(
-    `<a href="#" class="thumbnail"><img src="${latest.url}" alt="${latest.alt}"></a>`
+    `<a href="#0" class="thumbnail"><img src="${latest.url}" alt="${latest.alt}"></a>`
   );
   // Top stories image
   $("#top-stories .news-column-section:nth-child(2) .news-content").prepend(
-    `<a href="#" class="thumbnail"><img src="${top.url}" alt="${top.alt}"></a>`
+    `<a href="#0" class="thumbnail"><img src="${top.url}" alt="${top.alt}"></a>`
   );
   // Insider image
   $("#insider .news-column-section:nth-child(2) .news-content").prepend(
-    `<a href="#" class="thumbnail"><img src="${insider.url}" alt="${insider.alt}"></a>`
+    `<a href="#0" class="thumbnail"><img src="${insider.url}" alt="${insider.alt}"></a>`
   );
 }
 addImage(images);
