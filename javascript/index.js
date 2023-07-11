@@ -104,7 +104,7 @@ articlesLatest.forEach(function (article) {
   <section class="news-column-section">
   <article class="news-content">
   <h3><a href="#">${article.title}</a></h3>
-  <p>By <a href="">${article.author}</a></p>
+  <p>By <a href="#">${article.author}</a></p>
   <p>${article.text}</p>
   </article>
   </section>
@@ -120,7 +120,7 @@ articlesTop.forEach(function (article) {
   <section class="news-column-section">
   <article class="news-content">
   <h3><a href="#">${article.title}</a></h3>
-  <p>By <a href="">${article.author}</a></p>
+  <p>By <a href="#">${article.author}</a></p>
   <p>${article.text}</p>
   </article>
   </section>
