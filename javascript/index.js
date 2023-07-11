@@ -22,7 +22,6 @@ $(".site-header__sub-menu-title")
   .off("click")
   .on("click", function () {
     const arrow = $(this).find("svg");
-    console.log(arrow);
     $(".bi").not(arrow).removeClass("rotated");
     arrow.toggleClass("rotated");
 
@@ -30,6 +29,21 @@ $(".site-header__sub-menu-title")
     $(".site-header__sub-menu").not(subMenu).slideUp("fast");
     subMenu.slideToggle("fast");
   });
+
+// Define media query
+const mql = window.matchMedia("(min-width: 50em)");
+
+// Add the event listener to the MediaQueryList object
+mql.addEventListener("change", removeTransition);
+function removeTransition(e) {
+  if (e.matches) {
+    $(".site-header__menu-btn").removeClass("selected");
+    $(".site-header__nav").removeClass("show");
+
+    $(".site-header__sub-menu").hide();
+    $(".bi").removeClass("rotated");
+  }
+}
 
 const images = {
   latest: {

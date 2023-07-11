@@ -12,9 +12,10 @@ a:hover {
 /* ==== Colors ==== */
 
 :root {
-  --magenta-theme: #9E1F63;
-  --green-theme: #00A651;
-  --orange-theme-: #F7941D;
+  --magenta-theme: #9e1f63;
+  --green-theme: #00a651;
+  --orange-theme: #f7941d;
+  --light-orange-theme: #ffc074;
   --grey-theme: #aaa6a6;
   --dark-grey-theme: gray;
 }
@@ -53,7 +54,7 @@ body {
   top: 0;
   left: 0;
   list-style: none;
-  background-color: gray;
+  background-color: var(--orange-theme);
   width: 0;
   height: 100vh;
   text-align: center;
@@ -67,7 +68,7 @@ body {
 }
 
 .site-header__nav > ul li {
-  background-color: #aaa6a6;
+  background-color: var(--light-orange-theme);
   margin: 0.2rem 0;
   width: 100%;
 }
@@ -90,9 +91,11 @@ body {
   font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
-.site-header__nav ul > li:hover {
-  background-color: #aaa6a6;
-  box-shadow: 0 4px 16px;
+.site-header__nav ul > li:hover,
+.site-header__nav ul > li:hover .site-header__sub-menu-title {
+  --orange-theme: #faa033;
+  background-color: var(--orange-theme);
+  font-weight: 700;
 }
 
 /* Nav sub menu */
@@ -107,16 +110,17 @@ body {
 
 .site-header__sub-menu {
   width: 100%;
-
   list-style: none;
 }
 
 .site-header__sub-menu-title + ul li {
-  background-color: #cfcfcf;
+  background-color: var(--light-orange-theme);
 }
 
 .site-header__sub-menu-title + ul > li:hover {
-  background-color: rgb(233, 232, 232);
+  --orange-theme: #faa033;
+  background-color: var(--orange-theme);
+  font-weight: 700;
 }
 
 /* Menu button style */
@@ -178,7 +182,7 @@ body {
 }
 
 .site-header__menu-btn span:nth-child(6) {
-  background-color: var(--orange-theme-);
+  background-color: var(--orange-theme);
   left: 0;
   bottom: 4px;
 }
@@ -228,9 +232,15 @@ body {
     padding: 0.5rem 1rem;
   }
 
-  .site-header__nav ul li:hover {
+  /* .site-header__nav ul li:hover {
     background-color: white;
     box-shadow: none;
+  } */
+
+  .site-header__nav ul > li:hover,
+  .site-header__nav ul > li:hover .site-header__sub-menu-title {
+    --orange-theme: rgb(226, 238, 243);
+    background-color: var(--orange-theme);
   }
 
   .site-header__sub-menu-title + ul {
@@ -239,7 +249,9 @@ body {
     flex-direction: column;
     gap: 0;
     top: 4rem;
-    width: fit-content;
+    width: 10rem;
+    height: auto;
+    transform: translateX(-2rem);
   }
 
   .site-header__sub-menu-title + ul li {
@@ -421,7 +433,6 @@ footer {
 .logo-div {
   display: flex;
   justify-content: center;
-
 }
 
 .logo-div img {
@@ -443,7 +454,6 @@ footer {
 
 .footer-nav-links li {
   margin-left: 8px;
-  
 }
 
 .u-list-dot {
@@ -496,6 +506,3 @@ ul {
     margin-left: 1rem;
   }
 }
-
-
-
