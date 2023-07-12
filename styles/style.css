@@ -489,6 +489,7 @@ ul {
   text-align: center;
 }
 
+
 @media (min-width: 50em) {
   footer {
     display: flex;
