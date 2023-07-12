@@ -468,6 +468,17 @@ ul {
   display: block;
 }
 
+.address {
+  border-top: 2px solid black;
+  background-color: var(--grey-theme);
+  padding: 1rem 1rem 1rem 0;
+  font-size: .75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
 @media (min-width: 50em) {
   footer {
     display: flex;
@@ -493,6 +504,20 @@ ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin-left: 1rem;
+  }
+
+  .address {
+    border-top: 2px solid black;
+    background-color: var(--grey-theme);
+    padding: 1rem 1rem 1rem 0;
+    font-size: .75rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .address * {
     margin-left: 1rem;
   }
 }
