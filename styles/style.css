@@ -6,9 +6,13 @@ a {
 }
 
 a:hover {
-  color: white;
+  color: var(--magenta-theme);
 }
 
+
+.nowrap {
+  white-space: nowrap;
+}
 /* ==== Colors ==== */
 
 :root {
@@ -18,6 +22,8 @@ a:hover {
   --light-orange-theme: #ffc074;
   --grey-theme: #aaa6a6;
   --dark-grey-theme: gray;
+  --light-blue-theme: lightblue;
+  --darker-light-blue-theme: rgba(173, 216, 230, 0.716);
 }
 
 /* ==== Typography ==== */
@@ -424,7 +430,7 @@ footer {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  background-color: var(--grey-theme);
+  background-color: var(--light-blue-theme);
   padding: 2rem;
   padding-top: 0;
   border-top: 5px solid var(--magenta-theme);
@@ -470,7 +476,7 @@ footer {
   width: 7px;
   height: 7px;
   border-radius: 1rem;
-  background-color: var(--orange-theme-);
+  background-color: var(--orange-theme);
   margin: 0 8px;
 }
 
@@ -480,7 +486,7 @@ ul {
 
 .address {
   border-top: 2px solid black;
-  background-color: var(--grey-theme);
+  background-color: var(--darker-light-blue-theme);
   padding: 1rem 1rem 1rem 0;
   font-size: .75rem;
   display: flex;
@@ -496,7 +502,6 @@ ul {
     justify-content: center;
     flex-direction: row;
     text-align: center;
-    background-color: var(--grey-theme);
     padding: 2rem;
     padding-top: 0;
     border-top: 5px solid var(--magenta-theme);
@@ -520,7 +525,7 @@ ul {
 
   .address {
     border-top: 2px solid black;
-    background-color: var(--grey-theme);
+    background-color: var(--darker-light-blue-theme);
     padding: 1rem 1rem 1rem 0;
     font-size: .75rem;
     display: flex;
