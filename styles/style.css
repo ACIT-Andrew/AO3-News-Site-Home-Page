@@ -432,7 +432,7 @@ footer {
   text-align: center;
   background-color: var(--light-blue-theme);
   padding: 2rem;
-  padding-top: 0;
+  padding-top: 1rem;
   border-top: 5px solid var(--magenta-theme);
 }
 
@@ -442,8 +442,8 @@ footer {
 }
 
 .logo-div img {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  max-width: 300px;
   display: flex;
   justify-content: center;
   padding-top: 0;
@@ -509,8 +509,6 @@ ul {
   }
 
   .logo-div img {
-    width: 300px;
-    height: 300px;
     display: flex;
     justify-content: center;
     padding-top: 0;
